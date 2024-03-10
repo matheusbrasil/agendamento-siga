@@ -1,16 +1,20 @@
-const puppeteer = require('puppeteer');
+const puppeteer = require('puppeteer')
 
 class AgendamentoSiga {
 
+    static instance
     #browser
     #page
     #command
 
     constructor() {
-        if (!AgendamentoSiga.instance) {
-            AgendamentoSiga.instance = this;
+    }
+
+    static getIstance(chatId, bot) {
+        if (!this.instance) {
+            this.instance = new AgendamentoSiga()
         }
-        return AgendamentoSiga.instance;
+        return this.instance
     }
 
     set command(value) {
@@ -167,12 +171,14 @@ class AgendamentoSiga {
     async setLocalDeAtendimento(localDeAtendimento) {
         await this.#page.waitForSelector('#IdLocalAtendimento')
         let selectorIsDisabled
-        do {
-            selectorIsDisabled = await this.#page.evaluate(() => {
-                const selectElement = document.querySelector('#IdLocalAtendimento');
-                return selectElement.disabled;
-            });
-        } while (selectorIsDisabled);
+        if (localDeAtendimento) {
+            do {
+                selectorIsDisabled = await this.#page.evaluate(() => {
+                    const selectElement = document.querySelector('#IdLocalAtendimento');
+                    return selectElement.disabled;
+                });
+            } while (selectorIsDisabled);
+        }
         await this.#page.select('#IdLocalAtendimento', localDeAtendimento)
     }
 
@@ -193,6 +199,14 @@ class AgendamentoSiga {
             return screenshot
         }
     }
+
+    async checkAttendancePlace(district, locale, attendancePlace) {
+        await this.#navigateToAttendancePlace()
+        await this.setDistrito(district)
+        await this.setLocalidade(locale)
+        await this.setLocalDeAtendimento(attendancePlace)
+        return await this.navigateToAppointmentTime()
+    }
 }
 
-module.exports = new AgendamentoSiga();
+module.exports = AgendamentoSiga

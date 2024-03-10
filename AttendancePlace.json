@@ -1,0 +1,74 @@
+[
+    {
+        "districtName":"AVEIRO",
+        "districtValue":"1",
+        "localeName":"AVEIRO",
+        "localeValue":"5",
+        "attendancePlaceName": "Loja de Cidadão Aveiro",
+        "attendancePlaceValue": "45"
+    },
+    {
+        "districtName":"AVEIRO",
+        "districtValue":"1",
+        "localeName":"ESPINHO",
+        "localeValue":"7",
+        "attendancePlaceName": "CRC Espinho",
+        "attendancePlaceValue": "1205"
+    },
+    {
+        "districtName":"BRAGANÇA",
+        "districtValue":"4",
+        "localeName":"BRAGANÇA",
+        "localeValue":"2",
+        "attendancePlaceName": "ER Bragança",
+        "attendancePlaceValue": "586"
+    },
+    {
+        "districtName":"COIMBRA",
+        "districtValue":"6",
+        "localeName":"COIMBRA",
+        "localeValue":"3",
+        "attendancePlaceName": "Loja de Cidadão Coimbra",
+        "attendancePlaceValue": "34"
+    },
+    {
+        "districtName":"PORTO",
+        "districtValue":"13",
+        "localeName":"PORTO",
+        "localeValue":"12",
+        "attendancePlaceName": "Loja de Cidadão Porto",
+        "attendancePlaceValue": "25"
+    },
+    {
+        "districtName":"PORTO",
+        "districtValue":"13",
+        "localeName":"POVOA DE VARZIM",
+        "localeValue":"13",
+        "attendancePlaceName": "ER Póvoa de Varzim",
+        "attendancePlaceValue": "531"
+    },
+    {
+        "districtName":"VIANA DO CASTELO",
+        "districtValue":"16",
+        "localeName":"VIANA DO CASTELO",
+        "localeValue":"9",
+        "attendancePlaceName": "CRC Viana do Castelo",
+        "attendancePlaceValue": "898"
+    },
+    {
+        "districtName":"VILA REAL",
+        "districtValue":"17",
+        "localeName":"VILA REAL",
+        "localeValue":"14",
+        "attendancePlaceName": "Loja de Cidadão Vila Real",
+        "attendancePlaceValue": "1272"
+    },
+    {
+        "districtName":"VISEU",
+        "districtValue":"18",
+        "localeName":"VISEU",
+        "localeValue":"23",
+        "attendancePlaceName": "Loja de Cidadão Viseu",
+        "attendancePlaceValue": "46"
+    }
+]
