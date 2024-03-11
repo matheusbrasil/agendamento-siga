@@ -6,6 +6,10 @@ const AgendamentoSiga = require('./AgendamentoSiga');
 const Monitor = require('./Monitor');
 
 bot.onText(/\/start/, (msg) => {
+  bot.sendMessage(msg.chat.id, `Welcome ${msg.chat.first_name}, I'm here to support you monitoring the SIGA schedules.`)
+});
+
+bot.onText(/\/startmonitor/, (msg) => {
   const monitor = Monitor.getIstance(msg.chat.id, bot)
   monitor.startMonitor()
   bot.sendMessage(msg.chat.id, `Welcome ${msg.chat.first_name}, the bot will start the monitoring of the SIGA schedules.`)
